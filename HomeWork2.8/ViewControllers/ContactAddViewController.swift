@@ -8,22 +8,34 @@
 import UIKit
 
 class ContactAddViewController: UIViewController {
+    
+    @IBOutlet var newContactName: UITextField!
+    @IBOutlet var newContactSurname: UITextField!
+    @IBOutlet var newContactPhoneNumber: UITextField!
+    @IBOutlet var newContactEmail: UITextField!
+    
+    @IBOutlet var saveNewContact: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func saveNewContactButtonPressed() {
+        addNewContact()
     }
-    */
+    
+}
 
+
+extension ContactAddViewController {
+    private func addNewContact() -> Person {
+        let newContact = Person(
+            name: newContactName.text ?? "",
+            surname: newContactSurname.text ?? "",
+            email: newContactSurname.text ?? "",
+            phoneNumber: newContactPhoneNumber.text ?? ""
+        )
+        return newContact
+    }
 }
