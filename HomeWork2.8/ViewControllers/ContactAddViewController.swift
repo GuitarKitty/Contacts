@@ -27,15 +27,12 @@ class ContactAddViewController: UIViewController {
     
 }
 
-
+//MARK: Extention
 extension ContactAddViewController {
-    private func addNewContact() -> Person {
-        let newContact = Person(
-            name: newContactName.text ?? "",
-            surname: newContactSurname.text ?? "",
-            email: newContactSurname.text ?? "",
-            phoneNumber: newContactPhoneNumber.text ?? ""
-        )
-        return newContact
+    private func addNewContact() {
+        DataManager.shared.names.append(newContactName.text ?? "")
+        DataManager.shared.names.append(newContactSurname.text ?? "")
+        DataManager.shared.names.append(newContactPhoneNumber.text ?? "")
+        DataManager.shared.names.append(newContactEmail.text ?? "")
     }
 }
