@@ -8,22 +8,27 @@
 import UIKit
 
 class ContactProfileViewController: UIViewController {
-
+    
+//    Аутлеты для лейблов для отображения информации:
+//    email
+//    phoneNumber
+    
+    var person: Person!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        
+        title = person.fullName
+//        emailLabel.text = "Email: \(person.email)"
+//        phoneNumberLabel.text = "Phone: \(person.phoneNumber)"
     }
     
-
-    /*
+    
+    
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        let editVC = segue.destination as! ContactEditViewController
+//        editVC.person = person
     }
-    */
-
 }
