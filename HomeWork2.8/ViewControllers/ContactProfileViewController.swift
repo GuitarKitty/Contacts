@@ -18,7 +18,7 @@ class ContactProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        title = person.fullName
+        title = person?.fullName
 //        emailLabel.text = "Email: \(person.email)"
 //        phoneNumberLabel.text = "Phone: \(person.phoneNumber)"
     }
@@ -29,6 +29,6 @@ class ContactProfileViewController: UIViewController {
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         let editVC = segue.destination as! ContactEditViewController
-//        editVC.person = person
+        editVC.person = person
     }
 }
