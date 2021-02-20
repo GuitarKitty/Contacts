@@ -207,6 +207,9 @@
                                                 <rect key="frame" x="251" y="0.0" width="37" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonPressed" destination="sAI-Bj-Xyf" eventType="touchUpInside" id="b3K-2E-Ohz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -305,6 +308,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y1c-Vt-hhm"/>
+                    <connections>
+                        <outlet property="contactEmailTextFiled" destination="62m-Ly-uq3" id="Jxj-gu-LXX"/>
+                        <outlet property="contactNameTextField" destination="JXm-hT-Dso" id="1VJ-1W-aeZ"/>
+                        <outlet property="contactPhoneTextFiled" destination="oOK-Qj-gZh" id="yrL-Ad-Qni"/>
+                        <outlet property="contactSurnameTextFiled" destination="LwU-mL-Baa" id="CxC-C7-WD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2r-uJ-2Dy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
