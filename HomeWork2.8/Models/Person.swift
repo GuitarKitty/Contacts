@@ -18,10 +18,10 @@ extension Person {
         
         var persons: [Person] = []
         
-        let names = DataManager.shared.names.shuffled()
-        let surnames = DataManager.shared.surnames.shuffled()
-        let emails = DataManager.shared.emails.shuffled()
-        let phones = DataManager.shared.phones.shuffled()
+        let names = DataManager.shared.names
+        let surnames = DataManager.shared.surnames
+        let emails = DataManager.shared.emails
+        let phones = DataManager.shared.phones
         
 //        let iterationCount = min(names.count, surnames.count, emails.count, phones.count)
         
