@@ -15,14 +15,14 @@ class ContactAddViewController: UIViewController {
     @IBOutlet var newContactEmail: UITextField!
     
     @IBOutlet var saveNewContact: UIButton!
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
     
     @IBAction func saveNewContactButtonPressed() {
         addNewContact()
+        dismiss(animated: true)
+    }
+    
+    @IBAction func cancelButtonPressed() {
+        dismiss(animated: true)
     }
     
 }
@@ -30,9 +30,10 @@ class ContactAddViewController: UIViewController {
 //MARK: Extention
 extension ContactAddViewController {
     private func addNewContact() {
-        DataManager.shared.names.append(newContactName.text ?? "")
-        DataManager.shared.names.append(newContactSurname.text ?? "")
-        DataManager.shared.names.append(newContactPhoneNumber.text ?? "")
-        DataManager.shared.names.append(newContactEmail.text ?? "")
+        let dataManager = DataManager.shared
+        dataManager.names.append(newContactName.text ?? "")
+        dataManager.surnames.append(newContactSurname.text ?? "")
+        dataManager.phones.append(newContactPhoneNumber.text ?? "")
+        dataManager.emails.append(newContactEmail.text ?? "")
     }
 }
