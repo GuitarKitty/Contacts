@@ -64,11 +64,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="53" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed" destination="GE3-bJ-wah" eventType="touchUpInside" id="bFx-6w-M9c"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZKP-sV-6YI">
                                                 <rect key="frame" x="251" y="0.0" width="37" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveNewContactButtonPressed" destination="GE3-bJ-wah" eventType="touchUpInside" id="KSr-hj-t92"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -166,6 +172,13 @@
                             <constraint firstItem="Wk4-fI-kOw" firstAttribute="trailing" secondItem="C6R-11-lmi" secondAttribute="trailing" constant="16" id="v7w-hQ-nu6"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="newContactEmail" destination="eT3-70-xyi" id="VIy-AE-xpu"/>
+                        <outlet property="newContactName" destination="h5O-8F-zhL" id="zLd-iZ-hCF"/>
+                        <outlet property="newContactPhoneNumber" destination="Nk4-DV-qPj" id="dDP-bv-Lv8"/>
+                        <outlet property="newContactSurname" destination="VfB-Vr-Gpm" id="d5C-XU-CVh"/>
+                        <outlet property="saveNewContact" destination="ZKP-sV-6YI" id="FY8-t2-OOK"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5od-NA-fRt" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -194,6 +207,9 @@
                                                 <rect key="frame" x="251" y="0.0" width="37" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Save"/>
+                                                <connections>
+                                                    <action selector="saveButtonPressed" destination="sAI-Bj-Xyf" eventType="touchUpInside" id="b3K-2E-Ohz"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -292,6 +308,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="y1c-Vt-hhm"/>
+                    <connections>
+                        <outlet property="contactEmailTextFiled" destination="62m-Ly-uq3" id="Jxj-gu-LXX"/>
+                        <outlet property="contactNameTextField" destination="JXm-hT-Dso" id="1VJ-1W-aeZ"/>
+                        <outlet property="contactPhoneTextFiled" destination="oOK-Qj-gZh" id="yrL-Ad-Qni"/>
+                        <outlet property="contactSurnameTextFiled" destination="LwU-mL-Baa" id="CxC-C7-WD5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n2r-uJ-2Dy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
