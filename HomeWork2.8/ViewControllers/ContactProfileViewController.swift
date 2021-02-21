@@ -18,9 +18,9 @@ class ContactProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        fullNameLabel.text = "\(person.fullName)"
-        phoneNumberLabel.text = "\(person.email)"
-        emailLabel.text = "\(person.email)"
+        fullNameLabel.text = person.fullName
+        phoneNumberLabel.text = person.phoneNumber
+        emailLabel.text = person.email
     }
     
     
