@@ -28,7 +28,6 @@ class ContactAddViewController: UIViewController {
     @IBAction func cancelButtonPressed() {
         dismiss(animated: true)
     }
-    
 }
 
 //MARK: - Extentions
