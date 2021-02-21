@@ -9,10 +9,16 @@ import UIKit
 
 class ContactListViewController: UITableViewController {
     
-    var persons = Person.getContactList()
+    var persons: [Person] = []
 
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        persons = Person.getContactList()
+        tableView.reloadData()
     }
 
     // MARK: - Table view data source
