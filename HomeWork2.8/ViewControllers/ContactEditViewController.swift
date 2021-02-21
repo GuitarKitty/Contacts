@@ -19,11 +19,11 @@ class ContactEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        contactNameTextField.text = person.name
-        contactSurnameTextFiled.text = person.surname
-        contactPhoneTextFiled.text = person.phoneNumber
-        contactEmailTextFiled.text = person.email
+//        
+//        contactNameTextField.text = person.name
+//        contactSurnameTextFiled.text = person.surname
+//        contactPhoneTextFiled.text = person.phoneNumber
+//        contactEmailTextFiled.text = person.email
     }
     
     // MARK: - IBActions
