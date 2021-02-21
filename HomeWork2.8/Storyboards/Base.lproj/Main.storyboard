@@ -367,6 +367,11 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="emailLabel" destination="Dax-Pw-DSU" id="RhQ-Sy-EU0"/>
+                        <outlet property="fullNameLabel" destination="seG-1O-Ha8" id="z7C-74-py6"/>
+                        <outlet property="phoneNumberLabel" destination="htm-vO-jGc" id="t66-m9-pfn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Web-Ka-wXS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
