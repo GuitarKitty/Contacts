@@ -89,5 +89,12 @@ class ContactListViewController: UITableViewController {
 //     let person = persons[indexPath.row]
 //    // profileVC.person = person
 // }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if let indexPath = tableView.indexPathForSelectedRow {
+            let detailVC = segue.destination as! ContactProfileViewController
+            detailVC.person = persons[indexPath.row]
+        }
+    }
 
 }
