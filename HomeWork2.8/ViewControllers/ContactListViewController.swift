@@ -44,6 +44,17 @@ class ContactListViewController: UITableViewController {
         return cell
     }
     
+    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == UITableViewCell.EditingStyle.delete {
+                persons.remove(at: indexPath.row)
+                tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+            DataManager.shared.names.remove(at: indexPath.row)
+            DataManager.shared.surnames.remove(at: indexPath.row)
+            DataManager.shared.phones.remove(at: indexPath.row)
+            DataManager.shared.emails.remove(at: indexPath.row)
+            }
+    }
+    
 
     /*
     // Override to support conditional editing of the table view.
