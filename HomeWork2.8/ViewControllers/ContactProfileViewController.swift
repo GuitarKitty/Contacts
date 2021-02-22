@@ -31,13 +31,13 @@ class ContactProfileViewController: UIViewController {
     }
     
     // MARK: - Navigation
-        override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-            let editVC = segue.destination as! ContactEditViewController
-            editVC.person = person
-            editVC.dataManagerID = dataManagerID
-            editVC.delegate = self
-        }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let editVC = segue.destination as! ContactEditViewController
+        editVC.person = person
+        editVC.dataManagerID = dataManagerID
+        editVC.delegate = self
     }
+}
 
 //MARK: - Delegate init
 extension ContactProfileViewController: EditViewControllerDelegate {
