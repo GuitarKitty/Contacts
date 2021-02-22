@@ -22,7 +22,8 @@ class ContactEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactPhoneTextFiled.keyboardType = .numberPad
+        textFieldDelegate()
+        keyboardProperty()
         updateEditTextFields()
     }
     
@@ -56,27 +57,57 @@ extension ContactEditViewController {
             
             dismiss(animated: true)
         }
+    }
 }
-        
-    
-    func updateEditTextFields(){
+
+//MARK: - Work with textFileds
+extension ContactEditViewController: UITextFieldDelegate {
+    func updateEditTextFields() {
         contactNameTextField.text = DataManager.shared.names[dataManagerID]
         contactSurnameTextFiled.text = DataManager.shared.surnames[dataManagerID]
         contactPhoneTextFiled.text = DataManager.shared.phones[dataManagerID]
         contactEmailTextFiled.text = DataManager.shared.emails[dataManagerID]
     }
+    
+    func textFieldDelegate() {
+        contactNameTextField.delegate = self
+        contactSurnameTextFiled.delegate = self
+        contactPhoneTextFiled.delegate = self
+        contactEmailTextFiled.delegate = self
+    }
 }
 
 // MARK: - Work with keyboard
-extension ContactEditViewController{
+extension ContactEditViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
     }
-}
     
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case contactNameTextField:
+            contactSurnameTextFiled.becomeFirstResponder()
+        case contactSurnameTextFiled:
+            contactPhoneTextFiled.becomeFirstResponder()
+        case contactEmailTextFiled:
+            contactNameTextField.becomeFirstResponder()
+        default:
+            contactNameTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    func keyboardProperty() {
+        contactNameTextField.returnKeyType = .default
+        contactSurnameTextFiled.returnKeyType = .default
+        contactEmailTextFiled.returnKeyType = .default
+        contactPhoneTextFiled.keyboardType = .phonePad
+    }
+}
+
 // MARK: - Alert Controller
-extension ContactEditViewController{
+extension ContactEditViewController {
     private func showAllert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertOkButton = UIAlertAction(title: "OK",style: .default)

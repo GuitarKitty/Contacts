@@ -17,12 +17,16 @@ class ContactAddViewController: UIViewController {
     @IBOutlet var saveNewContact: UIButton!
     
     override func viewDidLoad() {
-        newContactPhoneNumber.keyboardType = .numberPad
+        newContactName.delegate = self
+        newContactSurname.delegate = self
+        newContactPhoneNumber.delegate = self
+        newContactEmail.delegate = self
+        
+        keyboardProperty()
     }
     
     @IBAction func saveNewContactButtonPressed() {
         addNewContact()
-        dismiss(animated: true)
     }
     
     @IBAction func cancelButtonPressed() {
@@ -49,6 +53,8 @@ extension ContactAddViewController {
         dataManager.surnames.append(newContactSurname.text ?? "")
         dataManager.phones.append(newContactPhoneNumber.text ?? "")
         dataManager.emails.append(newContactEmail.text ?? "")
+        
+        dismiss(animated: true)
     }
 }
 
@@ -57,6 +63,25 @@ extension ContactAddViewController: UITextFieldDelegate {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        switch textField {
+        case newContactName:
+            newContactSurname.becomeFirstResponder()
+        case newContactSurname:
+            newContactPhoneNumber.becomeFirstResponder()
+        default:
+            newContactName.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    func keyboardProperty() {
+        newContactName.returnKeyType = .default
+        newContactSurname.returnKeyType = .default
+        newContactEmail.returnKeyType = .default
+        newContactPhoneNumber.keyboardType = .phonePad
     }
 }
 
