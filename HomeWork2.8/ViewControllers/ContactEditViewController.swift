@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactEditViewController: UIViewController {
+class ContactEditViewController: UIViewController, UITextFieldDelegate {
     
     // MARK: - IBOutlets
     @IBOutlet var contactNameTextField: UITextField!
@@ -22,7 +22,8 @@ class ContactEditViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        contactPhoneTextFiled.keyboardType = .numberPad
+        textFieldDelegate()
+        keyboardProperty()
         updateEditTextFields()
     }
     
@@ -57,12 +58,22 @@ extension ContactEditViewController {
             dismiss(animated: true)
         }
     }
-    
+}
+
+//MARK: - Work with textFileds
+extension ContactEditViewController {
     func updateEditTextFields() {
         contactNameTextField.text = DataManager.shared.names[dataManagerID]
         contactSurnameTextFiled.text = DataManager.shared.surnames[dataManagerID]
         contactPhoneTextFiled.text = DataManager.shared.phones[dataManagerID]
         contactEmailTextFiled.text = DataManager.shared.emails[dataManagerID]
+    }
+    
+    func textFieldDelegate() {
+        contactNameTextField.delegate = self
+        contactSurnameTextFiled.delegate = self
+        contactPhoneTextFiled.delegate = self
+        contactEmailTextFiled.delegate = self
     }
 }
 
@@ -71,6 +82,24 @@ extension ContactEditViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
+    }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        if textField == contactNameTextField {
+            contactSurnameTextFiled.becomeFirstResponder()
+        } else if textField == contactSurnameTextFiled {
+            contactPhoneTextFiled.becomeFirstResponder()
+        } else if textField == contactEmailTextFiled {
+            contactNameTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    func keyboardProperty() {
+        contactNameTextField.returnKeyType = .default
+        contactSurnameTextFiled.returnKeyType = .default
+        contactEmailTextFiled.returnKeyType = .default
+        contactPhoneTextFiled.keyboardType = .phonePad
     }
 }
 
