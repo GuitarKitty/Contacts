@@ -21,6 +21,8 @@ class ContactAddViewController: UIViewController {
         newContactSurname.delegate = self
         newContactPhoneNumber.delegate = self
         newContactEmail.delegate = self
+        
+        keyboardProperty()
     }
     
     @IBAction func saveNewContactButtonPressed() {
@@ -73,6 +75,13 @@ extension ContactAddViewController: UITextFieldDelegate {
             newContactName.becomeFirstResponder()
         }
         return true
+    }
+    
+    func keyboardProperty() {
+        newContactName.returnKeyType = .default
+        newContactSurname.returnKeyType = .default
+        newContactEmail.returnKeyType = .default
+        newContactPhoneNumber.keyboardType = .phonePad
     }
 }
 
