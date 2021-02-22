@@ -28,8 +28,8 @@ class ContactEditViewController: UIViewController {
     
     // MARK: - IBActions
     @IBAction func saveButtonPressed() {
-        delegate.setNewContact(person: person)
         saveEditedData()
+        delegate.setNewContact(person: person)
     }
     
     @IBAction func cancelButtonPressed() {
