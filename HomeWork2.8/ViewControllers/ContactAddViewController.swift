@@ -69,8 +69,6 @@ extension ContactAddViewController: UITextFieldDelegate {
             newContactSurname.becomeFirstResponder()
         case newContactSurname:
             newContactPhoneNumber.becomeFirstResponder()
-        case newContactPhoneNumber:
-            newContactEmail.becomeFirstResponder()
         default:
             newContactName.becomeFirstResponder()
         }
