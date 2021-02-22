@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ContactEditViewController: UIViewController, UITextFieldDelegate {
+class ContactEditViewController: UIViewController {
     
     // MARK: - IBOutlets
     @IBOutlet var contactNameTextField: UITextField!
@@ -61,7 +61,7 @@ extension ContactEditViewController {
 }
 
 //MARK: - Work with textFileds
-extension ContactEditViewController {
+extension ContactEditViewController: UITextFieldDelegate {
     func updateEditTextFields() {
         contactNameTextField.text = DataManager.shared.names[dataManagerID]
         contactSurnameTextFiled.text = DataManager.shared.surnames[dataManagerID]
