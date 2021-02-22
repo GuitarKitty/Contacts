@@ -202,6 +202,9 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="53" height="33"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <state key="normal" title="Cancel"/>
+                                                <connections>
+                                                    <action selector="cancelButtonPressed" destination="sAI-Bj-Xyf" eventType="touchUpInside" id="1of-su-HWC"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v42-Bw-xPg">
                                                 <rect key="frame" x="251" y="0.0" width="37" height="33"/>
