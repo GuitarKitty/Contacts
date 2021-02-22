@@ -23,17 +23,16 @@ class ContactEditViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         contactPhoneTextFiled.keyboardType = .numberPad
-        
-        contactNameTextField.text = person.name
-        contactSurnameTextFiled.text = person.surname
-        contactPhoneTextFiled.text = person.phoneNumber
-        contactEmailTextFiled.text = person.email
+        updateEditTextFields()
     }
     
     // MARK: - IBActions
     @IBAction func saveButtonPressed() {
-        saveEditedData()
         delegate.setNewContact(person: person)
+        saveEditedData()
+    }
+    
+    @IBAction func cancelButtonPressed() {
         dismiss(animated: true)
     }
 }
@@ -43,20 +42,30 @@ extension ContactEditViewController {
     func saveEditedData() {
         if contactNameTextField.text == "" || contactPhoneTextFiled.text == "" {
             showAllert(title: "Error!", message: "Phone or name not entered, try again!")
+            return
+        } else {
+            DataManager.shared.names[dataManagerID] = contactNameTextField.text ?? ""
+            DataManager.shared.surnames[dataManagerID] = contactSurnameTextFiled.text ?? ""
+            DataManager.shared.phones[dataManagerID] = contactPhoneTextFiled.text ?? ""
+            DataManager.shared.emails[dataManagerID] = contactEmailTextFiled.text ?? ""
+            
+            person.name = contactNameTextField.text ?? ""
+            person.surname = contactSurnameTextFiled.text ?? ""
+            person.phoneNumber = contactPhoneTextFiled.text ?? ""
+            person.email = contactEmailTextFiled.text ?? ""
+            
+            dismiss(animated: true)
         }
+}
         
-        DataManager.shared.names[dataManagerID] = contactNameTextField.text ?? ""
-        DataManager.shared.surnames[dataManagerID] = contactSurnameTextFiled.text ?? ""
-        DataManager.shared.phones[dataManagerID] = contactPhoneTextFiled.text ?? ""
-        DataManager.shared.emails[dataManagerID] = contactEmailTextFiled.text ?? ""
-        
-        person.name = contactNameTextField.text ?? ""
-        person.surname = contactSurnameTextFiled.text ?? ""
-        person.phoneNumber = contactPhoneTextFiled.text ?? ""
-        person.email = contactEmailTextFiled.text ?? ""
+    
+    func updateEditTextFields(){
+        contactNameTextField.text = DataManager.shared.names[dataManagerID]
+        contactSurnameTextFiled.text = DataManager.shared.surnames[dataManagerID]
+        contactPhoneTextFiled.text = DataManager.shared.phones[dataManagerID]
+        contactEmailTextFiled.text = DataManager.shared.emails[dataManagerID]
     }
 }
-
 
 // MARK: - Work with keyboard
 extension ContactEditViewController{
