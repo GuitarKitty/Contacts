@@ -346,8 +346,8 @@
                                 <rect key="frame" x="16" y="107" width="288" height="288.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seG-1O-Ha8">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
