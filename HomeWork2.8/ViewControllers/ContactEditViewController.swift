@@ -85,11 +85,14 @@ extension ContactEditViewController {
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
-        if textField == contactNameTextField {
+        switch textField {
+        case contactNameTextField:
             contactSurnameTextFiled.becomeFirstResponder()
-        } else if textField == contactSurnameTextFiled {
+        case contactSurnameTextFiled:
             contactPhoneTextFiled.becomeFirstResponder()
-        } else if textField == contactEmailTextFiled {
+        case contactEmailTextFiled:
+            contactNameTextField.becomeFirstResponder()
+        default:
             contactNameTextField.becomeFirstResponder()
         }
         return true
