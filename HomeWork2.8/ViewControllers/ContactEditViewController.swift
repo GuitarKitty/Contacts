@@ -57,7 +57,7 @@ extension ContactEditViewController {
             dismiss(animated: true)
         }
     }
-        
+    
     func updateEditTextFields() {
         contactNameTextField.text = DataManager.shared.names[dataManagerID]
         contactSurnameTextFiled.text = DataManager.shared.surnames[dataManagerID]
@@ -73,7 +73,7 @@ extension ContactEditViewController {
         view.endEditing(true)
     }
 }
-    
+
 // MARK: - Alert Controller
 extension ContactEditViewController {
     private func showAllert(title: String?, message: String?) {
