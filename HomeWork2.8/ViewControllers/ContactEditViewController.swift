@@ -56,10 +56,9 @@ extension ContactEditViewController {
             
             dismiss(animated: true)
         }
-}
+    }
         
-    
-    func updateEditTextFields(){
+    func updateEditTextFields() {
         contactNameTextField.text = DataManager.shared.names[dataManagerID]
         contactSurnameTextFiled.text = DataManager.shared.surnames[dataManagerID]
         contactPhoneTextFiled.text = DataManager.shared.phones[dataManagerID]
@@ -68,7 +67,7 @@ extension ContactEditViewController {
 }
 
 // MARK: - Work with keyboard
-extension ContactEditViewController{
+extension ContactEditViewController {
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         super.touchesBegan(touches, with: event)
         view.endEditing(true)
@@ -76,7 +75,7 @@ extension ContactEditViewController{
 }
     
 // MARK: - Alert Controller
-extension ContactEditViewController{
+extension ContactEditViewController {
     private func showAllert(title: String?, message: String?) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         let alertOkButton = UIAlertAction(title: "OK",style: .default)
