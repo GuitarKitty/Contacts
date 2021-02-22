@@ -23,8 +23,6 @@ extension Person {
         let emails = DataManager.shared.emails
         let phones = DataManager.shared.phones
         
-//        let iterationCount = min(names.count, surnames.count, emails.count, phones.count)
-        
         for index in 0..<names.count {
             let person = Person(
                 name: names[index],
@@ -32,15 +30,10 @@ extension Person {
                 email: emails[index],
                 phoneNumber: phones[index]
             )
-            
+    
             persons.append(person)
         }
         
         return persons
     }
-}
-
-enum Contacts: String {
-    case phone = "phone"
-    case email = "tray"
 }

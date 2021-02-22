@@ -1,9 +1,8 @@
 //
-//  Data.swift
-//  HW3
+//  DataManager.swift
+//  HomeWork2.8
 //
-//  Created by Alexey Efimov on 04/04/2019.
-//  Copyright © 2019 Alexey Efimov. All rights reserved.
+//  Created by Alexey Mironov on 20.02.2021.
 //
 
 import Foundation
@@ -13,28 +12,21 @@ class DataManager {
     static var shared = DataManager()
     
     var names = [
-        "John", "Aaron", "Tim", "Ted",
-        "Steven", "Sharon", "Nicola",
-        "Allan", "Bruce", "Carl"
+        "Вася", "Артур", "Владимир", "Владимир", "Данила"
     ]
     
     var surnames = [
-        "Smith", "Dow", "Isaacson", "Pennyworth",
-        "Jankin", "Butler", "Black", "Robertson",
-        "Murphy", "Williams"
+        "Рогов", "Пирожков", "Путин", "Жириновский", "Бодров"
     ]
     
     var emails = [
-        "jjjj@mail.ru", "aaaa@mail.ru", "eeee@mail.ru",
-        "hhhh@mail.ru", "wwww@mail.ru", "mmmm@mail.ru",
-        "xxxx@mail.ru", "pppp@mail.ru", "ssss@mail.ru",
-        "llll@mail.ru"
+        "vasya@mail.ru", "pirog@mail.ru", "mr.presidentmail.ru",
+        "zhirik@mail.ru", "brother@mail.ru"
     ]
     
     var phones = [
-        "745396026", "145036843", "287185656", "293520954",
-        "562880225", "738594072", "825654134", "645898473",
-        "432349845", "459477625"
+        "+79111231212", "79111231212", "1", "+79111231213",
+        "+79111231131"
     ]
     
     private init() {}
