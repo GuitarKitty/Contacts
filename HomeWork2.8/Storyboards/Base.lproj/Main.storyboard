@@ -57,7 +57,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="C6R-11-lmi">
-                                <rect key="frame" x="16" y="8" width="288" height="311"/>
+                                <rect key="frame" x="16" y="8" width="288" height="316"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="195" translatesAutoresizingMaskIntoConstraints="NO" id="8jW-ao-Iqc">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="33"/>
@@ -81,13 +81,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kfA-Ru-Szu">
-                                        <rect key="frame" x="0.0" y="51" width="288" height="25"/>
-                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="51" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="uAL-cY-Omd">
-                                        <rect key="frame" x="0.0" y="94" width="288" height="217"/>
+                                        <rect key="frame" x="0.0" y="99" width="288" height="217"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="4" translatesAutoresizingMaskIntoConstraints="NO" id="J3A-gF-AnO">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="76"/>
@@ -200,7 +200,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="kWw-cv-oeX">
-                                <rect key="frame" x="16" y="8" width="288" height="311"/>
+                                <rect key="frame" x="16" y="8" width="288" height="316"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="equalSpacing" spacing="195" translatesAutoresizingMaskIntoConstraints="NO" id="ijQ-E9-ol0">
                                         <rect key="frame" x="0.0" y="0.0" width="288" height="33"/>
@@ -224,13 +224,13 @@
                                         </subviews>
                                     </stackView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Edit contact" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fwk-zk-cOM">
-                                        <rect key="frame" x="0.0" y="51" width="288" height="25"/>
-                                        <fontDescription key="fontDescription" name="Rockwell-Bold" family="Rockwell" pointSize="25"/>
+                                        <rect key="frame" x="0.0" y="51" width="288" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="G8C-9L-emh">
-                                        <rect key="frame" x="0.0" y="94" width="288" height="217"/>
+                                        <rect key="frame" x="0.0" y="99" width="288" height="217"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nJd-Au-CKa">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="76"/>
@@ -343,16 +343,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="64" translatesAutoresizingMaskIntoConstraints="NO" id="fTH-eJ-FfW">
-                                <rect key="frame" x="16" y="107" width="288" height="282"/>
+                                <rect key="frame" x="16" y="107" width="288" height="288.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Full Name" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="seG-1O-Ha8">
-                                        <rect key="frame" x="0.0" y="0.0" width="288" height="32"/>
-                                        <fontDescription key="fontDescription" name="HiraMinProN-W6" family="Hiragino Mincho ProN" pointSize="32"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="288" height="38.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="zuO-Ho-UOE">
-                                        <rect key="frame" x="0.0" y="96" width="288" height="63"/>
+                                        <rect key="frame" x="0.0" y="102.5" width="288" height="63"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Phone number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkx-fq-9Pc">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="26.5"/>
@@ -369,7 +369,7 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="uGI-yQ-878">
-                                        <rect key="frame" x="0.0" y="223" width="288" height="59"/>
+                                        <rect key="frame" x="0.0" y="229.5" width="288" height="59"/>
                                         <subviews>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drW-2D-IaQ">
                                                 <rect key="frame" x="0.0" y="0.0" width="288" height="26.5"/>
